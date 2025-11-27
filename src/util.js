@@ -3,17 +3,19 @@ export function range(start, end, step = 1) {
   const output = []
   let i;
   //  implement a range function
+  //when only start variable is defined
   if(end === undefined){
     for( i = 0; i < start; i += step){
       output.push(i);
     }
   }
+  //when only start and end variable is defined
   else if(start && end){
     for( i = start; i <= end; i += step){
       output.push(i);
     }
   }else{
-  //when all variables are available, run as follows
+  //when all variables are defined
   for( i = start; i <= end; i += step){
     output.push(i);
   }}
