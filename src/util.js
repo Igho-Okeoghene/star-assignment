@@ -1,9 +1,22 @@
 // - named export
 export function range(start, end, step = 1) {
   const output = []
-
+  let i;
   //  implement a range function
-
+  if(end === undefined){
+    for( i = 0; i < start; i += step){
+      output.push(i);
+    }
+  }
+  else if(start && end){
+    for( i = start; i <= end; i += step){
+      output.push(i);
+    }
+  }else{
+  //when all variables are available, run as follows
+  for( i = start; i <= end; i += step){
+    output.push(i);
+  }}
   return output
 }
 
